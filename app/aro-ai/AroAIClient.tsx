@@ -98,18 +98,7 @@ export default function AroAIClient() {
               </CardContent>
             </Card>
           </motion.div>
-          <motion.div variants={itemVariants} className="flex flex-col gap-4">
-            <img
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-07-27%20at%2010.59.48%20AM-G45nsxc6p4roSnXXExP9JNwHscBYK4.jpeg"
-              alt="ARO AI Model Details"
-              className="rounded-lg shadow-lg object-cover w-full h-auto"
-            />
-            <img
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-07-27%20at%2010.59.57%20AM-xAvKkdPtCZyAWzbfgU0s19v5wDuPIj.jpeg"
-              alt="ARO AI Key Differences"
-              className="rounded-lg shadow-lg object-cover w-full h-auto"
-            />
-          </motion.div>
+          {/* Images removed as requested */}
         </div>
       </motion.section>
     </div>
