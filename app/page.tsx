@@ -2,8 +2,8 @@ import HomeClient from "./HomeClient"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "PURE STUDIO - Universal Rich Editor",
-  description: "Your professional universal rich editor, designed for seamless content creation.",
+  title: "PURE STUDIO - Home",
+  description: "Welcome to PURE STUDIO, your professional universal rich editor.",
 }
 
 export default function HomePage() {

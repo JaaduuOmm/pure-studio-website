@@ -1,11 +1,11 @@
-import type { Metadata } from "next"
 import ReleaseInfoClient from "./ReleaseInfoClient"
+import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "PURE-Studio Release Information",
-  description: "Get the latest release information for PURE-Studio",
+  title: "PURE STUDIO - Release Info",
+  description: "Stay updated with the latest release information and development status of our projects.",
 }
 
-export default function ReleaseInfo() {
+export default function ReleaseInfoPage() {
   return <ReleaseInfoClient />
 }

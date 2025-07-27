@@ -2,8 +2,8 @@ import FeaturesClient from "./FeaturesClient"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Features - PURE STUDIO",
-  description: "Explore the powerful features of PURE STUDIO, designed to enhance your productivity and creativity.",
+  title: "PURE STUDIO - Features",
+  description: "Explore the powerful features of PURE STUDIO and our other projects.",
 }
 
 export default function FeaturesPage() {

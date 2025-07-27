@@ -1,11 +1,11 @@
-import type { Metadata } from "next"
 import ShauryaPortfolioClient from "./ShauryaPortfolioClient"
+import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Shaurya Fatania's Portfolio | PURE-Studio",
-  description: "Portfolio of Shaurya Fatania, co-creator of PURE-Studio.",
+  title: "Shaurya Fatania - Portfolio",
+  description: "The personal portfolio of Shaurya Fatania, Prompt Engineer and Frontend Specialist.",
 }
 
-export default function ShauryaPortfolioPage() {
+export default function ShauryaFataniaPage() {
   return <ShauryaPortfolioClient />
 }

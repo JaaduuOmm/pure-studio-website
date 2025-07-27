@@ -1,8 +1,20 @@
 "use client"
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { GitCommit, CopyrightIcon as License, Github, Mail, Rss, Users } from "lucide-react"
+import { Separator } from "@/components/ui/separator"
 import { motion } from "framer-motion"
+import { Code, Cpu, NotebookText, CalendarDays, Hourglass, Eye } from "lucide-react"
+
+const sectionVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+}
 
 const itemVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -11,164 +23,119 @@ const itemVariants = {
 
 export default function ReleaseInfoClient() {
   return (
-    <div className="space-y-10">
-      <div className="space-y-4">
-        <h1 className="text-4xl font-bold tracking-tight lg:text-5xl">📅 Release Information</h1>
-        <p className="text-lg text-muted-foreground">
-          Get the latest release information and stay updated with PURE-Studio's development.
-        </p>
-      </div>
+    <div className="space-y-16">
+      <motion.section
+        className="text-center space-y-6 py-12 bg-gradient-to-r from-primary/5 to-secondary/5 rounded-xl shadow-inner"
+        initial="hidden"
+        animate="visible"
+        variants={sectionVariants}
+      >
+        <motion.h1 className="text-5xl font-extrabold tracking-tight sm:text-6xl lg:text-7xl" variants={itemVariants}>
+          Release Information
+        </motion.h1>
+        <motion.p className="mt-4 text-xl text-muted-foreground max-w-3xl mx-auto" variants={itemVariants}>
+          Stay up-to-date with the latest developments and upcoming releases for our projects.
+        </motion.p>
+      </motion.section>
 
-      <div className="grid gap-6 md:grid-cols-2">
-        <motion.div
-          variants={itemVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-        >
-          <Card className="hover-3d h-full shadow-lg shadow-primary/5">
-            <CardHeader className="flex flex-row items-center gap-4 pb-2">
-              <div className="rounded-lg border bg-muted p-2">
-                <GitCommit className="h-6 w-6 text-primary" />
-              </div>
-              <CardTitle className="text-2xl font-semibold">Current Status</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-2 text-muted-foreground">
-              <p>
-                <strong>Version</strong>: Pre-Alpha
-              </p>
-              <p>
-                <strong>Release Date</strong>: Coming soon
-              </p>
-            </CardContent>
-          </Card>
-        </motion.div>
-
-        <motion.div
-          variants={itemVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          <Card className="hover-3d h-full shadow-lg shadow-primary/5">
-            <CardHeader className="flex flex-row items-center gap-4 pb-2">
-              <div className="rounded-lg border bg-muted p-2">
-                <License className="h-6 w-6 text-primary" />
-              </div>
-              <CardTitle className="text-2xl font-semibold">License</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-2 text-muted-foreground">
-              <p>
-                PURE-Studio is released under the{" "}
-                <a
-                  href="https://opensource.org/licenses/MIT"
-                  className="text-blue-500 hover:underline"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  MIT License
-                </a>
-                .
-              </p>
-            </CardContent>
-          </Card>
-        </motion.div>
-      </div>
-
-      <motion.div
-        variants={itemVariants}
+      {/* Project Development Status Section */}
+      <motion.section
+        className="space-y-10"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.5 }}
-        transition={{ duration: 0.6, delay: 0.3 }}
+        viewport={{ once: true, amount: 0.3 }}
+        variants={sectionVariants}
       >
-        <Card className="rounded-lg border bg-card p-8 hover-3d shadow-lg shadow-primary/5">
-          <div className="space-y-6">
-            <h2 className="text-2xl font-semibold">Stay Updated</h2>
-            <p className="text-muted-foreground">
-              PURE-Studio is still in its <strong>pre-alpha</strong> version, and there's more{" "}
-              <strong>coming soon</strong>. We're just getting started, and{" "}
-              <strong>we want you to be a part of it</strong>.
-            </p>
-            <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-              <li className="flex items-center gap-2">
-                <Github className="h-4 w-4 shrink-0" />
-                Follow our{" "}
-                <a
-                  href="https://github.com/NGL-Jaduu/PURE-studio"
-                  className="text-blue-500 hover:underline"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  GitHub repository
-                </a>
-              </li>
-              <li className="flex items-center gap-2">
-                <Users className="h-4 w-4 shrink-0" />
-                Join our community forums
-              </li>
-              <li className="flex items-center gap-2">
-                <Rss className="h-4 w-4 shrink-0" />
-                Subscribe to our newsletter
-              </li>
-            </ul>
-          </div>
-        </Card>
-      </motion.div>
-
-      <motion.div
-        variants={itemVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.5 }}
-        transition={{ duration: 0.6, delay: 0.4 }}
-      >
-        <Card className="rounded-lg border bg-card p-8 hover-3d shadow-lg shadow-primary/5">
-          <div className="space-y-6">
-            <h2 className="text-2xl font-semibold">Contact Information</h2>
-            <p className="text-muted-foreground">
-              Have any questions or want to chat? <strong>We'd love to hear from you</strong>.
-            </p>
-            <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-              <li className="flex items-center gap-2">
-                <Github className="h-4 w-4 shrink-0" />
-                GitHub:{" "}
-                <a
-                  href="https://github.com/NGL-Jaduu/PURE-studio"
-                  className="text-blue-500 hover:underline"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  PURE-Studio
-                </a>
-              </li>
-              <li className="flex items-center gap-2">
-                <Mail className="h-4 w-4 shrink-0" />
-                Email: t0xic.4pric0t@gmail.com
-              </li>
-            </ul>
-          </div>
-        </Card>
-      </motion.div>
-
-      <motion.div
-        variants={itemVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.5 }}
-        transition={{ duration: 0.6, delay: 0.5 }}
-      >
-        <div className="rounded-lg border bg-card p-8 hover-3d shadow-lg shadow-primary/5">
-          <blockquote className="space-y-2">
-            <p className="text-xl font-medium italic text-muted-foreground">
-              "Great ideas come from the <strong>purest</strong> minds. Welcome to PURE-Studio."
-            </p>
-            <footer className="text-sm text-muted-foreground">– NGL-Jaduu</footer>
-          </blockquote>
+        <motion.h2 className="text-4xl font-bold text-center" variants={itemVariants}>
+          Project Development Status
+        </motion.h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <motion.div variants={itemVariants}>
+            <Card className="hover-3d h-full shadow-lg shadow-primary/5">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-3 text-2xl">
+                  <Code className="h-6 w-6 text-primary" /> PURE STUDIO
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4 text-muted-foreground">
+                <p>
+                  PURE STUDIO is continuously evolving with new features and improvements. We are committed to providing
+                  a robust and versatile editing experience.
+                </p>
+                <Separator className="my-2" />
+                <div className="flex items-center gap-2 text-sm">
+                  <CalendarDays className="h-4 w-4" />
+                  <span>Last Update: July 2025</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <Hourglass className="h-4 w-4" />
+                  <span>Status: Active Development</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <Eye className="h-4 w-4" />
+                  <span>Project View: Coming Soon</span>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+          <motion.div variants={itemVariants}>
+            <Card className="hover-3d h-full shadow-lg shadow-primary/5">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-3 text-2xl">
+                  <Cpu className="h-6 w-6 text-primary" /> PromptOS
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4 text-muted-foreground">
+                <p>
+                  PromptOS is in its early development stages, focusing on core AI integration and system stability.
+                  Exciting updates are on the horizon!
+                </p>
+                <Separator className="my-2" />
+                <div className="flex items-center gap-2 text-sm">
+                  <CalendarDays className="h-4 w-4" />
+                  <span>Last Update: July 2025</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <Hourglass className="h-4 w-4" />
+                  <span>Status: Alpha Development</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <Eye className="h-4 w-4" />
+                  <span>Project View: Coming Soon</span>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+          <motion.div variants={itemVariants}>
+            <Card className="hover-3d h-full shadow-lg shadow-primary/5">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-3 text-2xl">
+                  <NotebookText className="h-6 w-6 text-primary" /> Collabify
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4 text-muted-foreground">
+                <p>
+                  Collabify is being actively developed to bring a superior collaborative note-taking experience. Stay
+                  tuned for beta access!
+                </p>
+                <Separator className="my-2" />
+                <div className="flex items-center gap-2 text-sm">
+                  <CalendarDays className="h-4 w-4" />
+                  <span>Last Update: July 2025</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <Hourglass className="h-4 w-4" />
+                  <span>Status: Pre-Alpha Development</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <Eye className="h-4 w-4" />
+                  <span>Project View: Coming Soon</span>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
         </div>
-      </motion.div>
+      </motion.section>
     </div>
   )
 }

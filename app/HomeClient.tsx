@@ -2,8 +2,21 @@
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { ArrowRight, Code, Cpu, Lightbulb, Rocket, Users, Github, NotebookText, Download } from "lucide-react"
-import Link from "next/link"
+import {
+  ArrowRight,
+  Code,
+  Cpu,
+  Lightbulb,
+  Rocket,
+  Users,
+  Github,
+  NotebookText,
+  Download,
+  Mail,
+  Bot,
+  LinkIcon,
+} from "lucide-react"
+import Link from "next/link" // This is the Next.js Link component
 import { motion } from "framer-motion"
 
 const sectionVariants = {
@@ -149,7 +162,7 @@ export default function HomeClient() {
         </motion.h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <motion.div variants={itemVariants}>
-            <Card className="hover-3d shadow-lg shadow-primary/5">
+            <Card className="hover-3d h-full shadow-lg shadow-primary/5">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3 text-2xl">
                   <Cpu className="h-6 w-6 text-primary" /> PromptOS
@@ -166,11 +179,11 @@ export default function HomeClient() {
                   <Button asChild variant="link" className="p-0 h-auto">
                     <Link href="https://github.com/JaaduuOmm/PromptOS" target="_blank" rel="noreferrer">
                       <Github className="mr-2 h-4 w-4" />
-                      GitHub Repo
+                      GitHub Repo (Coming Soon)
                     </Link>
                   </Button>
                   <Button variant="outline" size="sm" disabled>
-                    Copy Commands (Coming Soon)
+                    Commands (Coming Soon)
                   </Button>
                   <Button variant="outline" size="sm" disabled>
                     <Download className="mr-2 h-4 w-4" /> Download (Coming Soon)
@@ -180,7 +193,7 @@ export default function HomeClient() {
             </Card>
           </motion.div>
           <motion.div variants={itemVariants}>
-            <Card className="hover-3d shadow-lg shadow-primary/5">
+            <Card className="hover-3d h-full shadow-lg shadow-primary/5">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3 text-2xl">
                   <Code className="h-6 w-6 text-primary" /> PURE STUDIO
@@ -197,7 +210,7 @@ export default function HomeClient() {
             </Card>
           </motion.div>
           <motion.div variants={itemVariants}>
-            <Card className="hover-3d shadow-lg shadow-primary/5">
+            <Card className="hover-3d h-full shadow-lg shadow-primary/5">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3 text-2xl">
                   <NotebookText className="h-6 w-6 text-primary" /> Collabify
@@ -222,6 +235,104 @@ export default function HomeClient() {
             </Card>
           </motion.div>
         </div>
+      </motion.section>
+
+      {/* ARO AI Section */}
+      <motion.section
+        className="space-y-10"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={sectionVariants}
+      >
+        <motion.h2 className="text-4xl font-bold text-center" variants={itemVariants}>
+          Introducing ARO AI
+        </motion.h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <motion.div variants={itemVariants}>
+            <Card className="hover-3d h-full shadow-lg shadow-primary/5">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-3 text-2xl">
+                  <Bot className="h-6 w-6 text-primary" /> ARO AI
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4 text-muted-foreground">
+                <p>
+                  <strong>A</strong>utonomous – Works on its own, doesn’t need hand-holding
+                </p>
+                <p>
+                  <strong>R</strong>easoning – It thinks logically, makes sense of chaos
+                </p>
+                <p>
+                  <strong>O</strong>perator – Acts, executes, solves — not just thinks, but does
+                </p>
+                <p>
+                  <strong>AI</strong> – You already know, the brain behind the beast
+                </p>
+                <p className="text-sm font-medium">Custom trained in Llama3.2 70B.</p>
+                <p className="text-sm text-red-500 font-semibold">
+                  Disclaimer: ARO AI operates entirely independently, without relying on API keys from Google, Claude,
+                  ChatGPT, or any other third-party AI services. It is custom-trained on Cloudflare Workers to excel in
+                  all tasks and is available at no cost. The API key for integrating ARO AI into your projects is
+                  currently under development, with an estimated release date of September 2025, which may be subject to
+                  change.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <Button asChild variant="link" className="p-0 h-auto">
+                    <Link href="https://aro-ai-website.vercel.app/" target="_blank" rel="noreferrer">
+                      <LinkIcon className="mr-2 h-4 w-4" />
+                      Official Website
+                    </Link>
+                  </Button>
+                  <Button asChild variant="link" className="p-0 h-auto">
+                    <Link href="https://project.aroai.workers.dev/" target="_blank" rel="noreferrer">
+                      <LinkIcon className="mr-2 h-4 w-4" />
+                      Cloudflare Worker Deployment
+                    </Link>
+                  </Button>
+                  <Button variant="outline" size="sm" disabled>
+                    API (In Progress - August 2025)
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+          <motion.div variants={itemVariants} className="flex flex-col gap-4">
+            <img
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-07-27%20at%2010.59.48%20AM-G45nsxc6p4roSnXXExP9JNwHscBYK4.jpeg"
+              alt="ARO AI Model Details"
+              className="rounded-lg shadow-lg object-cover w-full h-auto"
+            />
+            <img
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-07-27%20at%2010.59.57%20AM-xAvKkdPtCZyAWzbfgU0s19v5wDuPIj.jpeg"
+              alt="ARO AI Key Differences"
+              className="rounded-lg shadow-lg object-cover w-full h-auto"
+            />
+          </motion.div>
+        </div>
+      </motion.section>
+
+      {/* Wanna Join Us? Section */}
+      <motion.section
+        className="text-center space-y-6 py-16 bg-primary/10 rounded-xl shadow-inner"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={sectionVariants}
+      >
+        <motion.h2 className="text-4xl font-bold" variants={itemVariants}>
+          Wanna Join Us?
+        </motion.h2>
+        <motion.p className="text-lg text-muted-foreground max-w-2xl mx-auto" variants={itemVariants}>
+          We're always looking for passionate individuals to join our journey. Show us what you've got!
+        </motion.p>
+        <motion.div className="flex justify-center gap-4 mt-8" variants={itemVariants}>
+          <Button asChild size="lg">
+            <Link href="mailto:jaaduu.mail@gmail.com">
+              Send a Mail <Mail className="ml-2 h-5 w-5" />
+            </Link>
+          </Button>
+        </motion.div>
       </motion.section>
     </div>
   )
