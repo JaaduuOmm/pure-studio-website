@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { ArrowRight, Code, Cpu, Lightbulb, Rocket, Users, Github, NotebookText } from "lucide-react"
+import { ArrowRight, Code, Cpu, Lightbulb, Rocket, Users, Github, NotebookText, Download } from "lucide-react"
 import Link from "next/link"
 import { motion } from "framer-motion"
 
@@ -36,9 +36,9 @@ export default function HomeClient() {
           Welcome
         </motion.h1>
         <motion.p className="mt-4 text-xl text-muted-foreground max-w-3xl mx-auto" variants={itemVariants}>
-          Explore our innovative projects like <span className="font-semibold text-primary">PromptOS</span>, a
-          minimalistic AI-powered OS for developers; <span className="font-semibold text-primary">PURE STUDIO</span>,
-          your professional universal rich editor; and <span className="font-semibold text-primary">Collabify</span>, a
+          Explore our innovative projects: <span className="font-semibold text-primary">PromptOS</span>, a minimalistic
+          AI-powered OS for developers; <span className="font-semibold text-primary">PURE STUDIO</span>, your
+          professional universal rich editor; and <span className="font-semibold text-primary">Collabify</span>, a
           collaborative note-taking app. While each is a distinct project, they share our commitment to excellence.
         </motion.p>
         <motion.div className="flex justify-center gap-4 mt-8" variants={itemVariants}>
@@ -159,14 +159,22 @@ export default function HomeClient() {
                 <p>
                   PromptOS is a minimalistic and lightweight operating system designed for your PC. It features an
                   inbuilt AI that runs locally, making it great for coding and efficient even on older hardware.
-                  Currently in active development, it's built for developers who value speed and simplicity.
                 </p>
-                <Button asChild variant="link" className="p-0 h-auto">
-                  <Link href="https://github.com/JaaduuOmm/PromptOS" target="_blank" rel="noreferrer">
-                    <Github className="mr-2 h-4 w-4" />
-                    GitHub Repository
-                  </Link>
-                </Button>
+                <p className="text-sm font-medium">Technologies: Python, C++, ASM</p>
+                <div className="flex flex-wrap gap-2">
+                  <Button asChild variant="link" className="p-0 h-auto">
+                    <Link href="https://github.com/JaaduuOmm/PromptOS" target="_blank" rel="noreferrer">
+                      <Github className="mr-2 h-4 w-4" />
+                      GitHub Repo
+                    </Link>
+                  </Button>
+                  <Button variant="outline" size="sm" disabled>
+                    Copy Commands (Coming Soon)
+                  </Button>
+                  <Button variant="outline" size="sm" disabled>
+                    <Download className="mr-2 h-4 w-4" /> Download (Coming Soon)
+                  </Button>
+                </div>
               </CardContent>
             </Card>
           </motion.div>
@@ -183,6 +191,7 @@ export default function HomeClient() {
                   editing experience for various content types. This very website serves as its official documentation
                   and community hub, showcasing its capabilities and fostering collaboration.
                 </p>
+                <p className="text-sm font-medium">Technologies: Electron</p>
               </CardContent>
             </Card>
           </motion.div>
@@ -199,6 +208,15 @@ export default function HomeClient() {
                   offering enhanced features for seamless teamwork and organization. It focuses on intuitive design and
                   powerful collaboration tools to streamline your workflow.
                 </p>
+                <p className="text-sm font-medium">Technologies: Next.js (not confirmed)</p>
+                <div className="flex flex-wrap gap-2">
+                  <Button variant="outline" size="sm" disabled>
+                    Open Website (Coming Soon)
+                  </Button>
+                  <Button variant="outline" size="sm" disabled>
+                    <Download className="mr-2 h-4 w-4" /> Download (Coming Soon)
+                  </Button>
+                </div>
               </CardContent>
             </Card>
           </motion.div>

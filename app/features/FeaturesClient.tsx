@@ -2,7 +2,19 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Palette, Zap, Code, Globe, Sparkles } from "lucide-react"
+import {
+  ArrowRight,
+  Palette,
+  Zap,
+  Code,
+  Globe,
+  Sparkles,
+  LayoutDashboard,
+  GitPullRequest,
+  Terminal,
+  Search,
+  Cloud,
+} from "lucide-react"
 import Link from "next/link"
 import { motion } from "framer-motion"
 
@@ -14,34 +26,64 @@ const featureVariants = {
 export default function FeaturesClient() {
   const features = [
     {
-      title: "Stunning Design",
+      title: "Stunning & Intuitive Design",
       description:
-        "We poured our hearts into crafting an editor that's not just functional, but truly beautiful. Every pixel, every curve, designed to inspire your best work.",
+        "We poured our hearts into crafting an editor that's not just functional, but truly beautiful. Every pixel, every curve, designed to inspire your best work with a clean, easy-to-navigate interface.",
       icon: Palette,
     },
     {
-      title: "Rich Functionality",
+      title: "Rich & Powerful Functionality",
       description:
         "Beyond the surface, you'll find a suite of powerful tools, meticulously engineered to make your coding and editing flow effortlessly. We thought of everything, so you don't have to.",
       icon: Code,
     },
     {
-      title: "Lightning Fast",
+      title: "Lightning Fast Performance",
       description:
         "Experience the thrill of an editor that keeps pace with your thoughts. We've optimized every line to ensure PURE-Studio feels incredibly responsive, letting you focus purely on creation.",
       icon: Zap,
     },
     {
-      title: "Customizable",
+      title: "Deep Customization Options",
       description:
-        "Your workflow is unique, and your tools should be too. We've built PURE-Studio with deep customization in mind, empowering you to shape it perfectly to your needs.",
+        "Your workflow is unique, and your tools should be too. We've built PURE-Studio with deep customization in mind, empowering you to shape it perfectly to your needs, from themes to keybindings.",
       icon: Sparkles,
     },
     {
-      title: "Cross-platform",
+      title: "Seamless Cross-Platform Support",
       description:
         "Work from anywhere, on any device. We believe your creativity shouldn't be confined, so PURE-Studio is engineered to deliver a consistent, powerful experience across all your platforms.",
       icon: Globe,
+    },
+    {
+      title: "Integrated Workspace Management",
+      description:
+        "Organize your projects with ease. Our integrated workspace features allow you to manage multiple files, folders, and settings within a single, cohesive environment.",
+      icon: LayoutDashboard,
+    },
+    {
+      title: "Version Control Integration",
+      description:
+        "Keep track of your changes effortlessly. PURE-Studio offers built-in support for popular version control systems like Git, making collaboration and history tracking a breeze.",
+      icon: GitPullRequest,
+    },
+    {
+      title: "Built-in Terminal Access",
+      description:
+        "Execute commands directly within your editor. Our integrated terminal provides quick access to your system's command line, enhancing your development workflow without switching applications.",
+      icon: Terminal,
+    },
+    {
+      title: "Advanced Search & Replace",
+      description:
+        "Find and modify text across your entire project with powerful search and replace functionalities, including regex support and case sensitivity options.",
+      icon: Search,
+    },
+    {
+      title: "Cloud Sync & Collaboration",
+      description:
+        "Work together in real-time or sync your projects across devices. PURE-Studio is designed with future-proof cloud capabilities to ensure your work is always accessible and up-to-date.",
+      icon: Cloud,
     },
   ]
 

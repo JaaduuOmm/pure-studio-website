@@ -1,11 +1,14 @@
-import type { Metadata } from "next"
 import FeaturesClient from "./FeaturesClient"
 
-export const metadata: Metadata = {
-  title: "PURE-Studio Features",
-  description: "Explore the powerful features of PURE-Studio",
+export const metadata = {
+  title: "Features - PURE Studio",
+  description: "Explore the powerful features of PURE Studio, your professional universal rich editor.",
 }
 
-export default function Features() {
-  return <FeaturesClient />
+export default function FeaturesPage() {
+  return (
+    <main className="flex-1 p-4 md:p-6">
+      <FeaturesClient />
+    </main>
+  )
 }
