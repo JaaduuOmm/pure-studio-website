@@ -2,7 +2,7 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { LinkIcon, Github, Linkedin, Mail } from "lucide-react"
+import { LinkIcon, Github, Instagram, Mail, MessageSquareText } from "lucide-react" // Added Instagram and MessageSquareText for Discord
 import Link from "next/link"
 import { motion } from "framer-motion"
 
@@ -17,7 +17,7 @@ export default function VedantPortfolioClient() {
       <div className="space-y-4">
         <h1 className="text-4xl font-bold tracking-tight lg:text-5xl">👤 Vedant Roy</h1>
         <p className="text-lg text-muted-foreground">
-          Backend specialist and architect focused on performance and scalability.
+          Social Expert, Data Analysis, Information Collection, and Trend Search.
         </p>
       </div>
 
@@ -34,12 +34,12 @@ export default function VedantPortfolioClient() {
           </CardHeader>
           <CardContent className="space-y-4 text-muted-foreground">
             <p>
-              Hello, I'm Vedant! My expertise lies in designing and implementing robust backend systems, optimizing
-              database queries, and ensuring high availability for applications.
+              Hello, I'm Vedant! My expertise lies in social media trends, data analysis, efficient information
+              collection, and identifying emerging trends. I leverage these skills to drive insights and strategic
+              decisions.
             </p>
             <p>
-              I have a strong background in Node.js, Python, and various cloud platforms. I am passionate about building
-              efficient and resilient systems that can handle large-scale data and traffic.
+              I am passionate about understanding user behavior and market dynamics to contribute to impactful projects.
             </p>
           </CardContent>
         </Card>
@@ -79,18 +79,6 @@ export default function VedantPortfolioClient() {
                 hub.
               </p>
             </div>
-            {/* Existing projects, if any, can be added here or removed if replaced */}
-            {/*
-            <ul className="list-disc list-inside space-y-2">
-              <li>
-                <strong>Data Analytics Pipeline:</strong> Developed a scalable data processing pipeline for real-time
-                analytics.
-              </li>
-              <li>
-                <strong>API Gateway:</strong> Designed and implemented a secure and high-performance API gateway.
-              </li>
-            </ul>
-            */}
           </CardContent>
         </Card>
       </motion.div>
@@ -104,6 +92,23 @@ export default function VedantPortfolioClient() {
       >
         <Card className="hover-3d shadow-lg shadow-primary/5">
           <CardHeader>
+            <CardTitle className="text-2xl font-semibold">Certifications</CardTitle>
+          </CardHeader>
+          <CardContent className="text-muted-foreground">
+            <p>Certifications (Coming Soon)</p>
+          </CardContent>
+        </Card>
+      </motion.div>
+
+      <motion.div
+        variants={itemVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.6, delay: 0.4 }}
+      >
+        <Card className="hover-3d shadow-lg shadow-primary/5">
+          <CardHeader>
             <CardTitle className="text-2xl font-semibold">Connect with Vedant</CardTitle>
           </CardHeader>
           <CardContent className="flex flex-wrap gap-4">
@@ -114,9 +119,15 @@ export default function VedantPortfolioClient() {
               </Link>
             </Button>
             <Button asChild variant="outline">
-              <Link href="https://linkedin.com/in/vedant-roy-profile" target="_blank" rel="noreferrer">
-                <Linkedin className="mr-2 h-4 w-4" />
-                LinkedIn
+              <Link href="https://instagram.com/vsat_studios" target="_blank" rel="noreferrer">
+                <Instagram className="mr-2 h-4 w-4" />
+                Instagram
+              </Link>
+            </Button>
+            <Button asChild variant="outline">
+              <Link href="https://discord.com/users/vsat12_80623" target="_blank" rel="noreferrer">
+                <MessageSquareText className="mr-2 h-4 w-4" />
+                Discord
               </Link>
             </Button>
             <Button asChild variant="outline">

@@ -159,6 +159,7 @@ export default function HomeClient() {
                 <p>
                   PromptOS is a minimalistic and lightweight operating system designed for your PC. It features an
                   inbuilt AI that runs locally, making it great for coding and efficient even on older hardware.
+                  Currently in active development, it's built for developers who value speed and simplicity.
                 </p>
                 <p className="text-sm font-medium">Technologies: Python, C++, ASM</p>
                 <div className="flex flex-wrap gap-2">

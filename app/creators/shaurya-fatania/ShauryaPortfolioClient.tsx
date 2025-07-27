@@ -2,7 +2,7 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { LinkIcon, Github, Linkedin, Mail } from "lucide-react"
+import { LinkIcon, Github, Instagram, Mail, MessageSquareText } from "lucide-react" // Added Instagram and MessageSquareText for Discord
 import Link from "next/link"
 import { motion } from "framer-motion"
 
@@ -16,9 +16,7 @@ export default function ShauryaPortfolioClient() {
     <div className="space-y-10">
       <div className="space-y-4">
         <h1 className="text-4xl font-bold tracking-tight lg:text-5xl">👤 Shaurya Fatania</h1>
-        <p className="text-lg text-muted-foreground">
-          Full-stack developer with a passion for creating intuitive and beautiful user interfaces.
-        </p>
+        <p className="text-lg text-muted-foreground">Prompt Engineer and Frontend Specialist in CSS, JS, and TS.</p>
       </div>
 
       <motion.div
@@ -34,12 +32,13 @@ export default function ShauryaPortfolioClient() {
           </CardHeader>
           <CardContent className="space-y-4 text-muted-foreground">
             <p>
-              Hi, I'm Shaurya! I specialize in building robust and scalable web applications using modern technologies.
-              My focus is on delivering exceptional user experiences through clean code and thoughtful design.
+              Hi, I'm Shaurya! I specialize in prompt engineering and crafting intuitive and beautiful user interfaces
+              using CSS, JavaScript, and TypeScript. My focus is on delivering exceptional user experiences through
+              clean code and thoughtful design.
             </p>
             <p>
-              I have experience with Next.js, React, Node.js, and various database technologies. I love tackling complex
-              problems and continuously learning new things.
+              I love tackling complex problems and continuously learning new things in the ever-evolving world of web
+              development and AI.
             </p>
           </CardContent>
         </Card>
@@ -79,18 +78,6 @@ export default function ShauryaPortfolioClient() {
                 hub.
               </p>
             </div>
-            {/* Existing projects, if any, can be added here or removed if replaced */}
-            {/*
-            <ul className="list-disc list-inside space-y-2">
-              <li>
-                <strong>E-commerce Platform:</strong> Developed a full-stack e-commerce solution with secure payment
-                integration.
-              </li>
-              <li>
-                <strong>Real-time Chat App:</strong> Built a real-time messaging application using WebSockets.
-              </li>
-            </ul>
-            */}
           </CardContent>
         </Card>
       </motion.div>
@@ -104,6 +91,23 @@ export default function ShauryaPortfolioClient() {
       >
         <Card className="hover-3d shadow-lg shadow-primary/5">
           <CardHeader>
+            <CardTitle className="text-2xl font-semibold">Certifications</CardTitle>
+          </CardHeader>
+          <CardContent className="text-muted-foreground">
+            <p>Certifications (Coming Soon)</p>
+          </CardContent>
+        </Card>
+      </motion.div>
+
+      <motion.div
+        variants={itemVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.6, delay: 0.4 }}
+      >
+        <Card className="hover-3d shadow-lg shadow-primary/5">
+          <CardHeader>
             <CardTitle className="text-2xl font-semibold">Connect with Shaurya</CardTitle>
           </CardHeader>
           <CardContent className="flex flex-wrap gap-4">
@@ -114,9 +118,15 @@ export default function ShauryaPortfolioClient() {
               </Link>
             </Button>
             <Button asChild variant="outline">
-              <Link href="https://linkedin.com/in/shaurya-fatania-profile" target="_blank" rel="noreferrer">
-                <Linkedin className="mr-2 h-4 w-4" />
-                LinkedIn
+              <Link href="https://instagram.com/iamjaaduu" target="_blank" rel="noreferrer">
+                <Instagram className="mr-2 h-4 w-4" />
+                Instagram
+              </Link>
+            </Button>
+            <Button asChild variant="outline">
+              <Link href="https://discord.com/users/dev_jaaduu" target="_blank" rel="noreferrer">
+                <MessageSquareText className="mr-2 h-4 w-4" />
+                Discord
               </Link>
             </Button>
             <Button asChild variant="outline">
@@ -126,7 +136,7 @@ export default function ShauryaPortfolioClient() {
               </Link>
             </Button>
             <Button asChild variant="outline">
-              <Link href="https://shaurya-fatania.com" target="_blank" rel="noreferrer">
+              <Link href="https://shaurya.netlify.app" target="_blank" rel="noreferrer">
                 <LinkIcon className="mr-2 h-4 w-4" />
                 Website
               </Link>

@@ -1,14 +1,11 @@
 import HomeClient from "./HomeClient"
+import type { Metadata } from "next"
 
-export const metadata = {
-  title: "Welcome - PURE Studio",
-  description: "Explore PURE Studio, PromptOS, and Collabify - innovative projects for developers and creators.",
+export const metadata: Metadata = {
+  title: "PURE STUDIO - Universal Rich Editor",
+  description: "Your professional universal rich editor, designed for seamless content creation.",
 }
 
 export default function HomePage() {
-  return (
-    <main className="flex-1 p-4 md:p-6">
-      <HomeClient />
-    </main>
-  )
+  return <HomeClient />
 }
