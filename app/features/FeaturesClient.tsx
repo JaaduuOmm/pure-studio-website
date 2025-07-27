@@ -36,7 +36,7 @@ import {
 
 export default function FeaturesClient() {
   return (
-    <div className="space-y-16 bg-gray-50">
+    <div className="space-y-16">
       <section className="text-center space-y-6 py-12 bg-gradient-to-r from-primary/5 to-secondary/5 rounded-xl shadow-inner">
         <h1 className="text-5xl font-extrabold tracking-tight sm:text-6xl lg:text-7xl">Our Core Strengths</h1>
         <p className="mt-4 text-xl text-muted-foreground max-w-3xl mx-auto">
