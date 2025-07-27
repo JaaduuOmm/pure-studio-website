@@ -1,7 +1,7 @@
 "use client"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Pen, Search, Sparkles, Rocket, Puzzle, Gift, Info, Users } from "lucide-react" // Added Users icon
+import { Pen, Search, Sparkles, Rocket, Puzzle, Gift, Info, Users, Bot } from "lucide-react" // Added Bot icon for AI
 
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -14,7 +14,7 @@ import {
   SidebarMenu,
   SidebarMenuItem,
   SidebarMenuButton,
-  SidebarHeader, // Ensure SidebarHeader is imported
+  SidebarHeader,
 } from "@/components/ui/sidebar"
 
 const navItems = [
@@ -23,7 +23,7 @@ const navItems = [
   { title: "Features", url: "/features", icon: Gift },
   { title: "Contribute", url: "/contribute", icon: Puzzle },
   { title: "Release Info", url: "/release-info", icon: Info },
-  { title: "Creator's Portfolio", url: "/creators", icon: Users }, // New navigation item
+  { title: "Creator's Portfolio", url: "/creators", icon: Users },
 ]
 
 export function AppSidebar() {
@@ -74,6 +74,23 @@ export function AppSidebar() {
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+
+        <SidebarGroup>
+          <SidebarGroupLabel>AI & Projects</SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild isActive={pathname === "/aro-ai"}>
+                  <Link href="/aro-ai" className="flex items-center gap-3">
+                    <Bot className="h-4 w-4" />
+                    ARO AI
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+              {/* You can add more AI-related projects here if needed */}
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>

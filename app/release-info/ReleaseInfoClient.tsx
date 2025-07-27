@@ -1,9 +1,10 @@
 "use client"
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Separator } from "@/components/ui/separator"
+import { Button } from "@/components/ui/button"
+import { Code, Cpu, NotebookText, GitBranch, CalendarDays } from "lucide-react"
+import Link from "next/link"
 import { motion } from "framer-motion"
-import { Code, Cpu, NotebookText, CalendarDays, Hourglass, Eye } from "lucide-react"
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -23,14 +24,14 @@ const itemVariants = {
 
 export default function ReleaseInfoClient() {
   return (
-    <div className="space-y-16">
+    <div className="space-y-10">
       <motion.section
         className="text-center space-y-6 py-12 bg-gradient-to-r from-primary/5 to-secondary/5 rounded-xl shadow-inner"
         initial="hidden"
         animate="visible"
         variants={sectionVariants}
       >
-        <motion.h1 className="text-5xl font-extrabold tracking-tight sm:text-6xl lg:text-7xl" variants={itemVariants}>
+        <motion.h1 className="text-5xl font-extrabold tracking-tight lg:text-7xl" variants={itemVariants}>
           Release Information
         </motion.h1>
         <motion.p className="mt-4 text-xl text-muted-foreground max-w-3xl mx-auto" variants={itemVariants}>
@@ -38,7 +39,6 @@ export default function ReleaseInfoClient() {
         </motion.p>
       </motion.section>
 
-      {/* Project Development Status Section */}
       <motion.section
         className="space-y-10"
         initial="hidden"
@@ -59,22 +59,15 @@ export default function ReleaseInfoClient() {
               </CardHeader>
               <CardContent className="space-y-4 text-muted-foreground">
                 <p>
-                  PURE STUDIO is continuously evolving with new features and improvements. We are committed to providing
-                  a robust and versatile editing experience.
+                  Our professional universal rich editor is continuously evolving with new features and performance
+                  enhancements.
                 </p>
-                <Separator className="my-2" />
-                <div className="flex items-center gap-2 text-sm">
-                  <CalendarDays className="h-4 w-4" />
-                  <span>Last Update: July 2025</span>
-                </div>
-                <div className="flex items-center gap-2 text-sm">
-                  <Hourglass className="h-4 w-4" />
-                  <span>Status: Active Development</span>
-                </div>
-                <div className="flex items-center gap-2 text-sm">
-                  <Eye className="h-4 w-4" />
-                  <span>Project View: Coming Soon</span>
-                </div>
+                <p className="text-sm font-medium flex items-center gap-2">
+                  <CalendarDays className="h-4 w-4" /> Last Update: July 2025
+                </p>
+                <Button variant="outline" size="sm" disabled>
+                  Project View (Coming Soon)
+                </Button>
               </CardContent>
             </Card>
           </motion.div>
@@ -87,22 +80,15 @@ export default function ReleaseInfoClient() {
               </CardHeader>
               <CardContent className="space-y-4 text-muted-foreground">
                 <p>
-                  PromptOS is in its early development stages, focusing on core AI integration and system stability.
-                  Exciting updates are on the horizon!
+                  The minimalistic AI-powered OS is under active development, focusing on stability and expanding its
+                  core functionalities.
                 </p>
-                <Separator className="my-2" />
-                <div className="flex items-center gap-2 text-sm">
-                  <CalendarDays className="h-4 w-4" />
-                  <span>Last Update: July 2025</span>
-                </div>
-                <div className="flex items-center gap-2 text-sm">
-                  <Hourglass className="h-4 w-4" />
-                  <span>Status: Alpha Development</span>
-                </div>
-                <div className="flex items-center gap-2 text-sm">
-                  <Eye className="h-4 w-4" />
-                  <span>Project View: Coming Soon</span>
-                </div>
+                <p className="text-sm font-medium flex items-center gap-2">
+                  <CalendarDays className="h-4 w-4" /> Last Update: July 2025
+                </p>
+                <Button variant="outline" size="sm" disabled>
+                  Project View (Coming Soon)
+                </Button>
               </CardContent>
             </Card>
           </motion.div>
@@ -115,26 +101,41 @@ export default function ReleaseInfoClient() {
               </CardHeader>
               <CardContent className="space-y-4 text-muted-foreground">
                 <p>
-                  Collabify is being actively developed to bring a superior collaborative note-taking experience. Stay
-                  tuned for beta access!
+                  Our collaborative note-taking app is in its early stages, with a strong focus on core features and
+                  user experience.
                 </p>
-                <Separator className="my-2" />
-                <div className="flex items-center gap-2 text-sm">
-                  <CalendarDays className="h-4 w-4" />
-                  <span>Last Update: July 2025</span>
-                </div>
-                <div className="flex items-center gap-2 text-sm">
-                  <Hourglass className="h-4 w-4" />
-                  <span>Status: Pre-Alpha Development</span>
-                </div>
-                <div className="flex items-center gap-2 text-sm">
-                  <Eye className="h-4 w-4" />
-                  <span>Project View: Coming Soon</span>
-                </div>
+                <p className="text-sm font-medium flex items-center gap-2">
+                  <CalendarDays className="h-4 w-4" /> Last Update: July 2025
+                </p>
+                <Button variant="outline" size="sm" disabled>
+                  Project View (Coming Soon)
+                </Button>
               </CardContent>
             </Card>
           </motion.div>
         </div>
+      </motion.section>
+
+      <motion.section
+        className="text-center space-y-6 py-16 bg-secondary/10 rounded-xl shadow-inner"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={sectionVariants}
+      >
+        <motion.h2 className="text-4xl font-bold" variants={itemVariants}>
+          Want to Contribute?
+        </motion.h2>
+        <motion.p className="text-lg text-muted-foreground max-w-2xl mx-auto" variants={itemVariants}>
+          Your ideas and code can help shape the future of our projects. Join our open-source community!
+        </motion.p>
+        <motion.div className="flex justify-center gap-4 mt-8" variants={itemVariants}>
+          <Button asChild size="lg">
+            <Link href="/contribute">
+              Learn How to Contribute <GitBranch className="ml-2 h-5 w-5" />
+            </Link>
+          </Button>
+        </motion.div>
       </motion.section>
     </div>
   )

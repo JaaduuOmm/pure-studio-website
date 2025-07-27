@@ -1,7 +1,9 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import Link from "next/link"
+import { motion } from "framer-motion"
 import {
   Lightbulb,
   Code,
@@ -32,8 +34,6 @@ import {
   NotebookText,
   ArrowRight,
 } from "lucide-react"
-import Link from "next/link"
-import { motion } from "framer-motion"
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -115,7 +115,7 @@ export default function FeaturesClient() {
               </CardHeader>
               <CardContent className="text-muted-foreground">
                 We obsessed over every millisecond to ensure lightning-fast performance. You'll experience a smooth,
-                responsive workflow, even with your largest projects.
+                responsive workflow, even when tackling your largest and most complex projects. No more waiting.
               </CardContent>
             </Card>
           </motion.div>
@@ -127,8 +127,8 @@ export default function FeaturesClient() {
                 </CardTitle>
               </CardHeader>
               <CardContent className="text-muted-foreground">
-                Personalize your workspace with a variety of themes and styling options. We believe your tools should
-                look and feel exactly how you want them to.
+                Personalize your workspace with a variety of built-in themes or create your own to match your aesthetic
+                and boost your productivity.
               </CardContent>
             </Card>
           </motion.div>
@@ -140,8 +140,8 @@ export default function FeaturesClient() {
                 </CardTitle>
               </CardHeader>
               <CardContent className="text-muted-foreground">
-                Your data's safety is paramount. We've implemented strong security measures to protect your work and
-                privacy, giving you peace of mind.
+                Your data's security is our top priority. We've implemented strong security measures to protect your
+                work and privacy, giving you peace of mind.
               </CardContent>
             </Card>
           </motion.div>

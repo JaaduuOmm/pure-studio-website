@@ -2,10 +2,10 @@ import type { Metadata } from "next"
 import CreatorsClient from "./CreatorsClient"
 
 export const metadata: Metadata = {
-  title: "Creator's Portfolio | PURE-Studio",
-  description: "Meet the creators of PURE-Studio: Shaurya Fatania and Vedant Roy.",
+  title: "Creators - PURE-Studio",
+  description: "Meet the creators behind PURE-Studio and our other projects.",
 }
 
-export default function CreatorsPage() {
+export default function Creators() {
   return <CreatorsClient />
 }

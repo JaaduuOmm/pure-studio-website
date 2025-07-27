@@ -1,11 +1,11 @@
-import VedantPortfolioClient from "./VedantPortfolioClient"
 import type { Metadata } from "next"
+import VedantPortfolioClient from "./VedantPortfolioClient"
 
 export const metadata: Metadata = {
-  title: "Vedant Roy - Portfolio",
-  description: "The personal portfolio of Vedant Roy, Social Expert and Data Analyst.",
+  title: "Vedant Roy - Creator's Portfolio",
+  description: "Portfolio of Vedant Roy, Social Expert and Data Analyst.",
 }
 
-export default function VedantRoyPage() {
+export default function VedantPortfolio() {
   return <VedantPortfolioClient />
 }

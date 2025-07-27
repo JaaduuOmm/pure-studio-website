@@ -1,10 +1,21 @@
 "use client"
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { User, ArrowRight } from "lucide-react"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Users, Mail } from "lucide-react"
 import Link from "next/link"
 import { motion } from "framer-motion"
+
+const sectionVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+}
 
 const itemVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -12,73 +23,87 @@ const itemVariants = {
 }
 
 export default function CreatorsClient() {
-  const creators = [
-    {
-      name: "Shaurya Fatania",
-      description: "Full-stack developer and UI/UX enthusiast.",
-      link: "/creators/shaurya-fatania",
-    },
-    {
-      name: "Vedant Roy",
-      description: "Backend specialist and performance optimization expert.",
-      link: "/creators/vedant-roy",
-    },
-  ]
-
   return (
     <div className="space-y-10">
-      <div className="space-y-4">
-        <h1 className="text-4xl font-bold tracking-tight lg:text-5xl">✨ Creator's Portfolio</h1>
-        <p className="text-lg text-muted-foreground">Meet the brilliant minds behind PURE-Studio.</p>
-      </div>
+      <motion.section
+        className="text-center space-y-6 py-12 bg-gradient-to-r from-purple-500/5 to-pink-500/5 rounded-xl shadow-inner"
+        initial="hidden"
+        animate="visible"
+        variants={sectionVariants}
+      >
+        <motion.h1 className="text-5xl font-extrabold tracking-tight lg:text-7xl" variants={itemVariants}>
+          Our Creators
+        </motion.h1>
+        <motion.p className="mt-4 text-xl text-muted-foreground max-w-3xl mx-auto" variants={itemVariants}>
+          Meet the passionate individuals behind PURE-Studio and our other innovative projects.
+        </motion.p>
+      </motion.section>
 
-      <div className="grid gap-6 md:grid-cols-2">
-        {creators.map((creator, i) => (
-          <motion.div
-            key={i}
-            variants={itemVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.6, delay: i * 0.1 }}
-          >
+      <motion.section
+        className="space-y-10"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={sectionVariants}
+      >
+        <motion.h2 className="text-4xl font-bold text-center" variants={itemVariants}>
+          Meet the Team
+        </motion.h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <motion.div variants={itemVariants}>
             <Card className="hover-3d h-full shadow-lg shadow-primary/5">
-              <CardHeader className="flex flex-row items-center gap-4 pb-2">
-                <div className="rounded-lg border bg-muted p-2">
-                  <User className="h-6 w-6 text-primary" />
-                </div>
-                <CardTitle className="text-2xl font-semibold">{creator.name}</CardTitle>
+              <CardHeader>
+                <CardTitle className="flex items-center gap-3 text-2xl">
+                  <Users className="h-6 w-6 text-primary" /> Shaurya Fatania
+                </CardTitle>
               </CardHeader>
-              <CardContent className="flex flex-col gap-4">
-                <p className="text-muted-foreground">{creator.description}</p>
-                <Button asChild variant="outline" className="w-fit bg-transparent">
-                  <Link href={creator.link}>
-                    View Portfolio
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
+              <CardContent className="space-y-4 text-muted-foreground">
+                <p>Prompt Engineer & Frontend Specialist (CSS, JS, TS)</p>
+                <Button asChild size="sm">
+                  <Link href="/creators/shaurya-fatania">View Portfolio</Link>
                 </Button>
               </CardContent>
             </Card>
           </motion.div>
-        ))}
-      </div>
+          <motion.div variants={itemVariants}>
+            <Card className="hover-3d h-full shadow-lg shadow-primary/5">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-3 text-2xl">
+                  <Users className="h-6 w-6 text-primary" /> Vedant Roy
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4 text-muted-foreground">
+                <p>Social Expert, Data Analysis, Information Collection, & Trend Search</p>
+                <Button asChild size="sm">
+                  <Link href="/creators/vedant-roy">View Portfolio</Link>
+                </Button>
+              </CardContent>
+            </Card>
+          </motion.div>
+        </div>
+      </motion.section>
 
-      <motion.div
-        variants={itemVariants}
+      <motion.section
+        className="text-center space-y-6 py-16 bg-secondary/10 rounded-xl shadow-inner"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.5 }}
-        transition={{ duration: 0.6, delay: 0.3 }}
+        viewport={{ once: true, amount: 0.3 }}
+        variants={sectionVariants}
       >
-        <div className="rounded-lg border bg-card p-8 hover-3d shadow-lg shadow-primary/5">
-          <blockquote className="space-y-2">
-            <p className="text-xl font-medium italic text-muted-foreground">
-              "Innovation is the key to progress, and these creators embody that spirit."
-            </p>
-            <footer className="text-sm text-muted-foreground">– The PURE-Studio Team</footer>
-          </blockquote>
-        </div>
-      </motion.div>
+        <motion.h2 className="text-4xl font-bold" variants={itemVariants}>
+          Interested in Joining Us?
+        </motion.h2>
+        <motion.p className="text-lg text-muted-foreground max-w-2xl mx-auto" variants={itemVariants}>
+          We're always looking for passionate individuals to join our journey. Show us what you've got!
+        </motion.p>
+        <motion.div className="flex justify-center gap-4 mt-8" variants={itemVariants}>
+          <Button asChild size="lg">
+            <Link href="mailto:jaaduu.mail@gmail.com">
+              Send a Mail <Mail className="ml-2 h-5 w-5" />
+            </Link>
+          </Button>
+        </motion.div>
+      </motion.section>
     </div>
   )
 }
