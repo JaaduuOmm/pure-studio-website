@@ -3,7 +3,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { motion } from "framer-motion"
 import {
   Lightbulb,
   Code,
@@ -35,52 +34,21 @@ import {
   ArrowRight,
 } from "lucide-react"
 
-const sectionVariants = {
-  hidden: { opacity: 0, y: 50 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-}
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0 },
-}
-
 export default function FeaturesClient() {
   return (
-    <div className="space-y-16">
-      <motion.section
-        className="text-center space-y-6 py-12 bg-gradient-to-r from-primary/5 to-secondary/5 rounded-xl shadow-inner"
-        initial="hidden"
-        animate="visible"
-        variants={sectionVariants}
-      >
-        <motion.h1 className="text-5xl font-extrabold tracking-tight sm:text-6xl lg:text-7xl" variants={itemVariants}>
-          Our Core Strengths
-        </motion.h1>
-        <motion.p className="mt-4 text-xl text-muted-foreground max-w-3xl mx-auto" variants={itemVariants}>
+    <div className="space-y-16 bg-gray-50">
+      <section className="text-center space-y-6 py-12 bg-gradient-to-r from-primary/5 to-secondary/5 rounded-xl shadow-inner">
+        <h1 className="text-5xl font-extrabold tracking-tight sm:text-6xl lg:text-7xl">Our Core Strengths</h1>
+        <p className="mt-4 text-xl text-muted-foreground max-w-3xl mx-auto">
           We've poured our passion into crafting features that truly make a difference in your workflow and creative
           process.
-        </motion.p>
-      </motion.section>
+        </p>
+      </section>
 
-      <motion.section
-        className="space-y-10"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        variants={sectionVariants}
-      >
-        <motion.h2 className="text-4xl font-bold text-center" variants={itemVariants}>
-          Key Capabilities
-        </motion.h2>
+      <section className="space-y-10">
+        <h2 className="text-4xl font-bold text-center">Key Capabilities</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <motion.div variants={itemVariants}>
+          <div>
             <Card className="hover-3d h-full shadow-lg shadow-primary/5">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3 text-2xl">
@@ -92,8 +60,8 @@ export default function FeaturesClient() {
                 out the tools. It's about making your experience seamless and enjoyable.
               </CardContent>
             </Card>
-          </motion.div>
-          <motion.div variants={itemVariants}>
+          </div>
+          <div>
             <Card className="hover-3d h-full shadow-lg shadow-primary/5">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3 text-2xl">
@@ -105,8 +73,8 @@ export default function FeaturesClient() {
                 to be robust and customizable, adapting to your unique needs.
               </CardContent>
             </Card>
-          </motion.div>
-          <motion.div variants={itemVariants}>
+          </div>
+          <div>
             <Card className="hover-3d h-full shadow-lg shadow-primary/5">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3 text-2xl">
@@ -118,8 +86,8 @@ export default function FeaturesClient() {
                 responsive workflow, even when tackling your largest and most complex projects. No more waiting.
               </CardContent>
             </Card>
-          </motion.div>
-          <motion.div variants={itemVariants}>
+          </div>
+          <div>
             <Card className="hover-3d h-full shadow-lg shadow-primary/5">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3 text-2xl">
@@ -131,8 +99,8 @@ export default function FeaturesClient() {
                 and boost your productivity.
               </CardContent>
             </Card>
-          </motion.div>
-          <motion.div variants={itemVariants}>
+          </div>
+          <div>
             <Card className="hover-3d h-full shadow-lg shadow-primary/5">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3 text-2xl">
@@ -144,8 +112,8 @@ export default function FeaturesClient() {
                 work and privacy, giving you peace of mind.
               </CardContent>
             </Card>
-          </motion.div>
-          <motion.div variants={itemVariants}>
+          </div>
+          <div>
             <Card className="hover-3d h-full shadow-lg shadow-primary/5">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3 text-2xl">
@@ -157,8 +125,8 @@ export default function FeaturesClient() {
                 up-to-date and always within reach.
               </CardContent>
             </Card>
-          </motion.div>
-          <motion.div variants={itemVariants}>
+          </div>
+          <div>
             <Card className="hover-3d h-full shadow-lg shadow-primary/5">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3 text-2xl">
@@ -170,8 +138,8 @@ export default function FeaturesClient() {
                 innovate as one.
               </CardContent>
             </Card>
-          </motion.div>
-          <motion.div variants={itemVariants}>
+          </div>
+          <div>
             <Card className="hover-3d h-full shadow-lg shadow-primary/5">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3 text-2xl">
@@ -183,8 +151,8 @@ export default function FeaturesClient() {
                 feature and function.
               </CardContent>
             </Card>
-          </motion.div>
-          <motion.div variants={itemVariants}>
+          </div>
+          <div>
             <Card className="hover-3d h-full shadow-lg shadow-primary/5">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3 text-2xl">
@@ -196,8 +164,8 @@ export default function FeaturesClient() {
                 you to your information faster.
               </CardContent>
             </Card>
-          </motion.div>
-          <motion.div variants={itemVariants}>
+          </div>
+          <div>
             <Card className="hover-3d h-full shadow-lg shadow-primary/5">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3 text-2xl">
@@ -209,8 +177,8 @@ export default function FeaturesClient() {
                 you in your creative flow.
               </CardContent>
             </Card>
-          </motion.div>
-          <motion.div variants={itemVariants}>
+          </div>
+          <div>
             <Card className="hover-3d h-full shadow-lg shadow-primary/5">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3 text-2xl">
@@ -222,8 +190,8 @@ export default function FeaturesClient() {
                 yours.
               </CardContent>
             </Card>
-          </motion.div>
-          <motion.div variants={itemVariants}>
+          </div>
+          <div>
             <Card className="hover-3d h-full shadow-lg shadow-primary/5">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3 text-2xl">
@@ -234,8 +202,8 @@ export default function FeaturesClient() {
                 Work in your preferred language. We're building a global tool, accessible and comfortable for everyone.
               </CardContent>
             </Card>
-          </motion.div>
-          <motion.div variants={itemVariants}>
+          </div>
+          <div>
             <Card className="hover-3d h-full shadow-lg shadow-primary/5">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3 text-2xl">
@@ -247,8 +215,8 @@ export default function FeaturesClient() {
                 the work happens.
               </CardContent>
             </Card>
-          </motion.div>
-          <motion.div variants={itemVariants}>
+          </div>
+          <div>
             <Card className="hover-3d h-full shadow-lg shadow-primary/5">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3 text-2xl">
@@ -260,8 +228,8 @@ export default function FeaturesClient() {
                 structured and safe.
               </CardContent>
             </Card>
-          </motion.div>
-          <motion.div variants={itemVariants}>
+          </div>
+          <div>
             <Card className="hover-3d h-full shadow-lg shadow-primary/5">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3 text-2xl">
@@ -273,8 +241,8 @@ export default function FeaturesClient() {
                 control to protect your progress.
               </CardContent>
             </Card>
-          </motion.div>
-          <motion.div variants={itemVariants}>
+          </div>
+          <div>
             <Card className="hover-3d h-full shadow-lg shadow-primary/5">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3 text-2xl">
@@ -286,8 +254,8 @@ export default function FeaturesClient() {
                 coding experience smoother.
               </CardContent>
             </Card>
-          </motion.div>
-          <motion.div variants={itemVariants}>
+          </div>
+          <div>
             <Card className="hover-3d h-full shadow-lg shadow-primary/5">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3 text-2xl">
@@ -299,8 +267,8 @@ export default function FeaturesClient() {
                 full potential.
               </CardContent>
             </Card>
-          </motion.div>
-          <motion.div variants={itemVariants}>
+          </div>
+          <div>
             <Card className="hover-3d h-full shadow-lg shadow-primary/5">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3 text-2xl">
@@ -312,8 +280,8 @@ export default function FeaturesClient() {
                 development.
               </CardContent>
             </Card>
-          </motion.div>
-          <motion.div variants={itemVariants}>
+          </div>
+          <div>
             <Card className="hover-3d h-full shadow-lg shadow-primary/5">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3 text-2xl">
@@ -324,8 +292,8 @@ export default function FeaturesClient() {
                 Organize your tasks and never miss a deadline with integrated scheduling and reminder functionalities.
               </CardContent>
             </Card>
-          </motion.div>
-          <motion.div variants={itemVariants}>
+          </div>
+          <div>
             <Card className="hover-3d h-full shadow-lg shadow-primary/5">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3 text-2xl">
@@ -336,8 +304,8 @@ export default function FeaturesClient() {
                 Gain valuable insights into your usage and productivity with built-in analytics tools.
               </CardContent>
             </Card>
-          </motion.div>
-          <motion.div variants={itemVariants}>
+          </div>
+          <div>
             <Card className="hover-3d h-full shadow-lg shadow-primary/5">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3 text-2xl">
@@ -348,8 +316,8 @@ export default function FeaturesClient() {
                 Stay on top of important updates and activities with customizable notification settings.
               </CardContent>
             </Card>
-          </motion.div>
-          <motion.div variants={itemVariants}>
+          </div>
+          <div>
             <Card className="hover-3d h-full shadow-lg shadow-primary/5">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3 text-2xl">
@@ -360,8 +328,8 @@ export default function FeaturesClient() {
                 Manage permissions and control who can access your projects and data with fine-grained access control.
               </CardContent>
             </Card>
-          </motion.div>
-          <motion.div variants={itemVariants}>
+          </div>
+          <div>
             <Card className="hover-3d h-full shadow-lg shadow-primary/5">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3 text-2xl">
@@ -372,8 +340,8 @@ export default function FeaturesClient() {
                 Easily share your work with others through various sharing and export options.
               </CardContent>
             </Card>
-          </motion.div>
-          <motion.div variants={itemVariants}>
+          </div>
+          <div>
             <Card className="hover-3d h-full shadow-lg shadow-primary/5">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3 text-2xl">
@@ -384,8 +352,8 @@ export default function FeaturesClient() {
                 Our modular design allows for easy expansion and integration with other tools and services.
               </CardContent>
             </Card>
-          </motion.div>
-          <motion.div variants={itemVariants}>
+          </div>
+          <div>
             <Card className="hover-3d h-full shadow-lg shadow-primary/5">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3 text-2xl">
@@ -396,8 +364,8 @@ export default function FeaturesClient() {
                 For power users, our CLI provides direct control and automation capabilities.
               </CardContent>
             </Card>
-          </motion.div>
-          <motion.div variants={itemVariants}>
+          </div>
+          <div>
             <Card className="hover-3d h-full shadow-lg shadow-primary/5">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3 text-2xl">
@@ -409,8 +377,8 @@ export default function FeaturesClient() {
                 creativity.
               </CardContent>
             </Card>
-          </motion.div>
-          <motion.div variants={itemVariants}>
+          </div>
+          <div>
             <Card className="hover-3d h-full shadow-lg shadow-primary/5">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3 text-2xl">
@@ -421,25 +389,17 @@ export default function FeaturesClient() {
                 Capture ideas, organize thoughts, and create detailed notes with rich formatting and multimedia support.
               </CardContent>
             </Card>
-          </motion.div>
+          </div>
         </div>
-      </motion.section>
+      </section>
 
-      <motion.section
-        className="text-center space-y-6 py-16 bg-secondary/10 rounded-xl shadow-inner"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        variants={sectionVariants}
-      >
-        <motion.h2 className="text-4xl font-bold" variants={itemVariants}>
-          Ready to Experience the Difference?
-        </motion.h2>
-        <motion.p className="text-lg text-muted-foreground max-w-2xl mx-auto" variants={itemVariants}>
+      <section className="text-center space-y-6 py-16 bg-secondary/10 rounded-xl shadow-inner">
+        <h2 className="text-4xl font-bold">Ready to Experience the Difference?</h2>
+        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
           We're constantly evolving and adding new capabilities. Dive in and see how our features can transform your
           work.
-        </motion.p>
-        <motion.div className="flex justify-center gap-4 mt-8" variants={itemVariants}>
+        </p>
+        <div className="flex justify-center gap-4 mt-8">
           <Button asChild size="lg">
             <Link href="/getting-started">
               Get Started <ArrowRight className="ml-2 h-5 w-5" />
@@ -448,8 +408,8 @@ export default function FeaturesClient() {
           <Button asChild variant="outline" size="lg">
             <Link href="/contribute">Contribute</Link>
           </Button>
-        </motion.div>
-      </motion.section>
+        </div>
+      </section>
     </div>
   )
 }
