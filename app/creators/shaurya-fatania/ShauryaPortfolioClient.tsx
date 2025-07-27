@@ -54,13 +54,34 @@ export default function ShauryaPortfolioClient() {
       >
         <Card className="hover-3d shadow-lg shadow-primary/5">
           <CardHeader>
-            <CardTitle className="text-2xl font-semibold">Projects</CardTitle>
+            <CardTitle className="text-2xl font-semibold">My Projects</CardTitle>
           </CardHeader>
-          <CardContent className="space-y-4 text-muted-foreground">
+          <CardContent className="space-y-6 text-muted-foreground">
+            <div className="space-y-2">
+              <h3 className="text-xl font-semibold text-foreground">PromptOS</h3>
+              <p>
+                PromptOS is a minimalistic and lightweight operating system designed for your PC. It features an inbuilt
+                AI that runs locally, making it great for coding and efficient even on older hardware. Currently in
+                active development.
+              </p>
+              <Button asChild variant="link" className="p-0 h-auto">
+                <Link href="https://github.com/JaaduuOmm/PromptOS" target="_blank" rel="noreferrer">
+                  <Github className="mr-2 h-4 w-4" />
+                  GitHub Repository
+                </Link>
+              </Button>
+            </div>
+            <div className="space-y-2">
+              <h3 className="text-xl font-semibold text-foreground">PURE STUDIO</h3>
+              <p>
+                PURE STUDIO is a professional universal rich editor, designed to provide a seamless and powerful editing
+                experience for various content types. This website serves as its official documentation and community
+                hub.
+              </p>
+            </div>
+            {/* Existing projects, if any, can be added here or removed if replaced */}
+            {/*
             <ul className="list-disc list-inside space-y-2">
-              <li>
-                <strong>PURE-Studio:</strong> Co-creator of this professional universal rich editor.
-              </li>
               <li>
                 <strong>E-commerce Platform:</strong> Developed a full-stack e-commerce solution with secure payment
                 integration.
@@ -69,6 +90,7 @@ export default function ShauryaPortfolioClient() {
                 <strong>Real-time Chat App:</strong> Built a real-time messaging application using WebSockets.
               </li>
             </ul>
+            */}
           </CardContent>
         </Card>
       </motion.div>
